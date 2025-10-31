@@ -1,0 +1,125 @@
+.personal-page {
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-schedule-event-business-woman-checking-planner-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.personal-page .page-title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.personal-layout {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.task-form {
+  flex: 1;
+  max-width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.task-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #006c84;
+}
+
+.task-form input,
+.task-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.task-form button {
+  width: 100%;
+  padding: 12px;
+  background: #006c84;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-form button:hover {
+  background: #6eb5c0;
+}
+
+.calendar-container {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 500px;
+}
+body.dark .profile-container {
+  background: #121212 !important; /* remove image */
+  color: #f3f4f6;
+}
+
+body.dark .user-card,
+body.dark .history-card {
+  background: #1e1e1e;
+  color: #f3f4f6;
+}
+
+body.dark .user-avatar {
+  background: #4dd0e1;
+  color: #121212;
+}
+
+body.dark .history-list li {
+  background: #2c2c2c;
+  border: 1px solid #444;
+}
+
+body.dark .history-list li:hover {
+  background: #333;
+}
+body.dark .personal-page {
+  background: #121212 !important; /* remove image */
+  color: #f3f4f6;
+}
+
+body.dark .task-form,
+body.dark .calendar-container {
+  background: #1e1e1e;
+  color: #f3f4f6;
+}
+
+body.dark .task-form input,
+body.dark .task-form select {
+  background: #2c2c2c;
+  border: 1px solid #555;
+  color: #f3f4f6;
+}
+
+body.dark .task-form button {
+  background: #4dd0e1;
+  color: #121212;
+}
+
+body.dark .task-form button:hover {
+  background: #26c6da;
+}

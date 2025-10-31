@@ -1,0 +1,253 @@
+.feedback-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  padding: 15px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-schedule-event-business-woman-checking-planner-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Card */
+.feedback-card {
+  background: #ffffff;
+  padding: 28px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ====== Header ====== */
+.feedback-header h1 {
+  color: #006c84;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.feedback-header p {
+  color: #555;
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+}
+
+/* ====== Form ====== */
+.feedback-form .form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #006c84;
+  box-shadow: 0 0 5px rgba(0, 108, 132, 0.3);
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+/* ====== Rating ====== */
+.rating-container {
+  display: flex;
+  gap: 8px;
+}
+
+.rating-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #ccc;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.rating-button.active {
+  color: #ffb400;
+}
+
+.rating-button:hover {
+  transform: scale(1.15);
+}
+
+.rating-description {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* ====== Submit Button ====== */
+.submit-button {
+  width: 100%;
+  padding: 11px;
+  background-color: #006c84;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.submit-button:hover {
+  background-color: #6eb5c0;
+  transform: scale(1.02);
+}
+
+/* ====== Success State ====== */
+.success-container {
+  text-align: center;
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  max-width: 420px;
+}
+
+.success-icon {
+  margin: 0 auto 18px;
+  width: 55px;
+  height: 55px;
+  background: #006c84;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.success-title {
+  color: #006c84;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.pulse-animation {
+  font-size: 0.85rem;
+  color: #777;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.rating-button svg {
+  width: 28px;
+  height: 28px;
+  color: inherit; /* button color ni follow avvadaniki */
+}
+/* 🌙 Dark Mode for Feedback Page */
+body.dark .feedback-container {
+  background: #121212 !important;
+  color: #f3f4f6;
+}
+
+/* Card dark mode */
+body.dark .feedback-card {
+  background: #1e1e1e;
+  color: #f3f4f6;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Header dark mode */
+body.dark .feedback-header h1 {
+  color: #4dd0e1;
+}
+body.dark .feedback-header p {
+  color: #bbb;
+}
+
+/* Labels */
+body.dark .form-label {
+  color: #f3f4f6;
+}
+
+/* Inputs & Textarea */
+body.dark .form-input,
+body.dark .form-textarea {
+  background: #2c2c2c;
+  color: #f3f4f6;
+  border: 1px solid #555;
+}
+
+body.dark .form-input:focus,
+body.dark .form-textarea:focus {
+  border-color: #4dd0e1;
+  box-shadow: 0 0 5px rgba(77, 208, 225, 0.5);
+}
+
+/* Rating */
+body.dark .rating-button {
+  color: #777;
+}
+body.dark .rating-button.active {
+  color: #ffca28; /* golden highlight */
+}
+
+/* Submit Button */
+body.dark .submit-button {
+  background-color: #4dd0e1;
+  color: #121212;
+}
+body.dark .submit-button:hover {
+  background-color: #26c6da;
+  color: #fff;
+}
+
+/* Success State */
+body.dark .success-container {
+  background: #1e1e1e;
+  color: #f3f4f6;
+}
+body.dark .success-title {
+  color: #4dd0e1;
+}
+body.dark .success-message {
+  color: #ddd;
+}

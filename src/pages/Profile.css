@@ -1,0 +1,178 @@
+/* ===== Profile Page Background & Container ===== */
+.profile-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 80px; /* footer space */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-schedule-event-business-woman-checking-planner-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  min-height: 100%;
+  color: #222;
+}
+
+/* ===== Page Title ===== */
+.profile-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+}
+
+/* ===== Profile Grid Layout ===== */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== Card Shared Style ===== */
+.user-card,
+.history-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.user-card:hover,
+.history-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== User Card ===== */
+.user-card {
+  text-align: center;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #006c84;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.user-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+  margin-top: 18px;
+  padding: 12px;
+  width: 100%;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background: #c53030;
+  transform: scale(1.03);
+}
+
+/* ===== History / Next Step Card ===== */
+.history-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  color: #006c84;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== Navigation Button ===== */
+.theme-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #006c84;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.theme-btn:hover {
+  background: #0096a6;
+  transform: scale(1.03);
+}
+
+/* ===== No User Text ===== */
+.no-user {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 25px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Dark Mode Support ===== */
+body.dark {
+  background: #121212;
+  color: #f3f4f6;
+}
+
+body.dark .profile-title {
+  color: #f3f4f6;
+}
+
+body.dark .user-card,
+body.dark .history-card {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+
+body.dark .theme-btn {
+  background: #2563eb;
+}
+
+body.dark .theme-btn:hover {
+  background: #1d4ed8;
+}

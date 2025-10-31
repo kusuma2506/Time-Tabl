@@ -1,0 +1,451 @@
+/* ===== Full Page Background ===== */
+/* Full Page Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main App Wrapper */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Weeks Page - grows and pushes footer down */
+.weeks-page {
+  flex: 1; /* fills available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 150px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-schedule-event-business-woman-checking-planner-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.page-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #f9fafb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Card */
+.step-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* ===== Headings ===== */
+.step-card h2 {
+  text-align: center;
+  color: #006c84;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.step-card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+/* ===== Days Grid (Step 1) ===== */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.day-btn {
+  padding: 12px;
+  border: 2px solid #006c84;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #006c84;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.day-btn.selected {
+  background: #006c84;
+  color: #fff;
+}
+
+.day-btn:hover {
+  background: #e6f7fa;
+}
+
+/* Small day buttons for faculty availability */
+.days-grid-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.day-btn-small {
+  padding: 6px 10px;
+  border: 1px solid #006c84;
+  border-radius: 6px;
+  background: #f9fafb;
+  color: #006c84;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.day-btn-small.selected {
+  background: #006c84;
+  color: #fff;
+}
+
+.day-btn-small:hover {
+  background: #e6f7fa;
+}
+
+/* ===== Input Rows (Step 2 onwards) ===== */
+.input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.input-row input,
+.input-row select {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-row input:focus,
+.input-row select:focus {
+  border-color: #006c84;
+  box-shadow: 0 0 5px rgba(0, 108, 132, 0.25);
+}
+
+.input-row button {
+  padding: 8px 12px;
+  background: #e63946;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.input-row button:hover {
+  background: #c53030;
+}
+
+/* ===== Period & Break Rows (Step 2) ===== */
+.period-row,
+.break-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.period-row span,
+.break-row span {
+  min-width: 80px;
+  font-weight: 500;
+}
+
+.period-row input,
+.break-row input,
+.period-row select,
+.break-row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.period-row input:focus,
+.break-row input:focus {
+  border-color: #006c84;
+  box-shadow: 0 0 5px rgba(0, 108, 132, 0.25);
+}
+
+.period-row button,
+.break-row button {
+  padding: 8px 12px;
+  background: #e63946;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.period-row button:hover,
+.break-row button:hover {
+  background: #c53030;
+}
+
+/* ===== Form Labels ===== */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+label input {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+label input:focus {
+  border-color: #006c84;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 108, 132, 0.25);
+}
+
+/* ===== Faculty Cards (Step 4) ===== */
+.faculty-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.unavailability-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
+
+.unavailability-section label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.unavailable-select {
+  width: 100%;
+  min-height: 100px;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.unavailable-select:focus {
+  border-color: #006c84;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 108, 132, 0.25);
+}
+
+.selected-unavailable {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.unavailable-tag {
+  display: inline-block;
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 3px 8px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.no-unavailable {
+  color: #4caf50;
+  font-style: italic;
+}
+
+/* ===== Error Styles ===== */
+.error {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: #ffeaea;
+  border-radius: 6px;
+  border-left: 4px solid #e63946;
+}
+
+.error-input {
+  border-color: #e63946 !important;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.25) !important;
+}
+
+.error-text {
+  color: #e63946;
+  font-size: 12px;
+  margin-top: 4px;
+  flex-basis: 100%;
+}
+
+/* ===== Nav Buttons ===== */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prev-btn,
+.next-btn,
+.proceed-btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+}
+
+.prev-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.prev-btn:hover {
+  background: #999;
+  color: #fff;
+}
+
+.next-btn,
+.proceed-btn {
+  background: #006c84;
+  color: #fff;
+}
+
+.next-btn:hover,
+.proceed-btn:hover {
+  background: #6eb5c0;
+  transform: scale(1.02);
+}
+
+/* ===== Multi-select option styling ===== */
+.unavailable-select option {
+  padding: 5px;
+}
+
+.unavailable-select option:checked {
+  background: #006c84 linear-gradient(0deg, #006c84 0%, #006c84 100%);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .weeks-page {
+    padding: 15px;
+  }
+  
+  .step-card {
+    padding: 20px;
+  }
+  
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .input-row input,
+  .input-row select,
+  .input-row button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .days-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .period-row,
+  .break-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .period-row span,
+  .break-row span {
+    margin-bottom: 5px;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .page-heading {
+    font-size: 1.5rem;
+  }
+  
+  .step-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .days-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .step-card {
+    padding: 15px;
+  }
+  
+  .input-row button {
+    padding: 10px;
+  }
+}

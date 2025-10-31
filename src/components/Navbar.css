@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+/* Light mode */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #006C84; /* Light navbar */
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark mode */
+html.dark .navbar {
+  background-color: #000000; /* Dark navbar */
+  color: #f3f4f6;
+}
+
+.navbar-left img {
+  height: 100px;
+  cursor: pointer;
+}
+
+.navbar-center {
+  flex: 1;
+  text-align: center;
+  font-size: 32px;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.navbar-right li {
+  cursor: pointer;
+  padding: 5  px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.navbar-right li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark hover */
+html.dark .navbar-right li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cursor-pointer{
+  font-size: 19px;
+}

@@ -1,0 +1,17 @@
+/* ====== Footer Light Mode ====== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #006C84;  /* light gray */
+  color: white;        /* dark text */
+  font-size: 1.2rem;
+  border-top: 1px solid #e5e7eb;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== Footer Dark Mode ====== */
+.dark .footer {
+  background: #1e293b;   /* dark navy/gray */
+  color: #f3f4f6;        /* light text */
+  border-top: 1px solid #334155;
+}

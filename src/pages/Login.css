@@ -1,0 +1,127 @@
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-schedule-event-business-woman-checking-planner-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+}
+
+/* ✅ Dark mode override */
+body.dark .login-container {
+  background: #121212 !important;
+}
+
+/* Card */
+.login-container form {
+  width: 150%;
+  max-width: 450px;
+  background: #f4f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Dark mode card */
+body.dark .login-container form {
+  background: #1e1e1e;
+  color: #f3f4f6;
+}
+
+/* Heading */
+.login-container h2 {
+  color: #006C84;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Dark mode heading */
+body.dark .login-container h2 {
+  color: #4dd0e1;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Dark mode labels */
+body.dark .form-group label {
+  color: #f3f4f6;
+}
+
+/* Inputs and Select */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+
+  background: #2c2c2c;
+  color: #f3f4f6;
+  border: 1px solid #555;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px; /* space for the eye button */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.toggle-password {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-password:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+

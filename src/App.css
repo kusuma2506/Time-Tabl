@@ -1,0 +1,14 @@
+html.dark .login-container {
+  background: #121212 !important;
+  color: #f3f4f6;
+}
+
+html:not(.dark) .login-container {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://www.shutterstock.com/shutterstock/photos/2002803581/display_1500/stock-photo--event-planner-timetable-agenda-plan-on-2002803581.jpg")
+      no-repeat center center;
+  background-size: cover;
+}
